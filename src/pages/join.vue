@@ -112,9 +112,11 @@ export default {
       if (!verifyResult) {
         return this.$toast('请确认表单填写是否正确')
       }
-      this.api.enroll(this.formLabel).then(res => {
+      api.enroll(this.formLabel).then(res => {
         this.$toast('报名成功')
         jump('/vote', this.$router)
+      }).catch(msg => {
+        msg && this.$toast(msg)
       })
     },
     checkVerifyResult () {

@@ -6,6 +6,9 @@ import storage from '../lib/localstorage'
 function postWithoutSession (api, data) {
   return new Promise((resolve, reject) => {
     axios.post(api, qs.stringify(data)).then(res => {
+      if (res.data.code === '-1') {
+        reject(res.data.msg)
+      }
       resolve(res.data.data)
     }, reject)
   })

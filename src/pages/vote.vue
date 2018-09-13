@@ -188,8 +188,8 @@ export default {
         this.$toast('投票成功')
         this.initOtherInfo()
         this.initPageData()
-      }).catch(() => {
-        this.$toast('同一个用户一天只能投一次票')
+      }).catch((msg) => {
+        msg && this.$toast(msg)
       })
     },
     search () {
