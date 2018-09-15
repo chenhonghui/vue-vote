@@ -19,7 +19,7 @@ import api from '../api/index'
 import { jump } from '../actions/common'
 
 const CN_REG_18 = new RegExp(/^[\u4E00-\u9FA5]{1}[\u4E00-\u9FA5|\\！|\\，|\\。|\\（|\\）|\\《|\\》|\\“|\\”|\\？|\\：|\\；|\\【|\\】]{0,16}[\u4E00-\u9FA5|\\！|\\,|\\。|\\（|\\）|\\《|\\》|\\“|\\”|\\？|\\：|\\；|\\【|\\】]{1}$/)
-const CN_REG_30 = new RegExp(/^[\u4E00-\u9FA5]{1}[\u4E00-\u9FA5|\\！|\\，|\\。|\\（|\\）|\\《|\\》|\\“|\\”|\\？|\\：|\\；|\\【|\\】]{0,28}[\u4E00-\u9FA5|\\！|\\,|\\。|\\（|\\）|\\《|\\》|\\“|\\”|\\？|\\：|\\；|\\【|\\】]{1}$/)
+const CN_REG_30 = new RegExp(/^[\u4E00-\u9FA5]{1}[\u4E00-\u9FA5|\\！|\\，|\\。|\\（|\\）|\\《|\\》|\\“|\\”|\\？|\\：|\\；|\\【|\\】]{0,98}[\u4E00-\u9FA5|\\！|\\,|\\。|\\（|\\）|\\《|\\》|\\“|\\”|\\？|\\：|\\；|\\【|\\】]{1}$/)
 
 export default {
   data () {
@@ -52,14 +52,14 @@ export default {
           label: '宣传语描述',
           model: 'content',
           type: 'input',
-          placeholder: '请输入不超过30个中文的宣传语描述',
+          placeholder: '请输入不超过100个中文的宣传语描述',
           verify: (text) => {
             const testCN = CN_REG_30
             if (text.length <= 0) {
               return false
             }
             if (!testCN.test(text)) {
-              _this.$toast('请输入不超过30字的中文')
+              _this.$toast('请输入不超过100字的中文')
               return false
             }
             return true
