@@ -5,7 +5,7 @@
         <section class="detail-header-top-icon"></section>
       </section>
       <section class="detail-header-bottom" v-html="detailInfo[0].content"></section>
-      <p class="detail-header-red">获奖者最多可获得10000元奖金</p>
+      <p class="detail-header-red">获奖者最高可得10000元奖金</p>
     </section>
     <section class="page-detail-desc">
       <div class="page-detail-desc-icon top">
@@ -80,7 +80,7 @@ export default {
           content: '为了响应国家及省市相关部门的要求，改善医疗服务质量、构建和谐医患关系，树立医院良好形象，成都三六三医院拟面向大众<span style="font-weight: bold">公开收集医院社会评价</span>的同时，征集<span style="font-weight: bold">医院形象宣传语</span>。'
         },
         {
-          content: '成都三六三医院是集医疗、教学、科研、预防保健功能于一体的<span style="font-weight: bold">国家公立三级甲等综合医院</span>，秉承“以综合医院为依托，以特色专科为龙头”的办院思路，科室设置较齐全，专科特色突出，<span style="font-weight: bold">“微创外科”和“肿瘤多学科整合治疗”</span>优势明显……关于医院的详细介绍您可以关注微信公众号“三六三医院”了解哦。'
+          content: '成都三六三医院是集医疗、教学、科研功能于一体的<span style="font-weight: bold">国家公立三级甲等综合医院</span>，科室设置较齐全，专科特色突出，<span style="font-weight: bold">“全系外科微创治疗”和“肿瘤精准整合治疗”</span>为医院优势专业……关于医院的详细介绍您可以关注微信公众号“三六三医院”了解哦。'
         }
       ],
       ruleInfo: [
@@ -111,17 +111,17 @@ export default {
         },
         {
           title: '四、征集时间',
-          content: '<span style="font-weight: bold">2018年9月13日-9月28日</span><br/>最终的获奖者将通过媒体进行公示'
+          content: '<span style="font-weight: bold">2018年9月17日-9月28日</span><br/>最终的获奖者将通过媒体进行公示'
         },
         {
           title: '温馨提示',
           list: [
-            '针对医院的社会评价，要求客观真实。',
+            '针对医院的社会评价，要求客观真实',
             '宣传语投稿作品须为原创，不得与国内其他宣传语雷同，如涉及著作权纠纷等法律问题，由投稿者本人负责。',
             '每位投稿者最多可提交3条宣传语，若有重复，则以最后投稿的作品为准。',
             '宣传语需具有创意并且主题突出，对不符合要求的作品征集组委会有权进行筛除。',
             '如在投稿作品中出现雷同，以最先投稿为准，征集组委会不单独通知相同投稿者。',
-            '作品一旦获奖，获奖作品版权将归成都三六三医院所有。'
+            '作品一旦获奖，获奖作品知识产权将归成都三六三医院所有。'
           ],
           alert: '成都三六三医院对此次活动拥有最终解释权！'
         }
@@ -165,7 +165,7 @@ export default {
       padding-left: 40px;
       font-size: 32px;
       line-height: 45px;
-      background: url('~@/assets/images/icon4.png') no-repeat left center;
+      background: url('~@/assets/images/icon4.png') no-repeat left 6.5px;
       background-size: 32px 32px;
     }
 

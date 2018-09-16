@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="header-cutdown">
-        <p class="header-cutdown-title">活动结束倒计时</p>
+        <p class="header-cutdown-title">征集结束倒计时</p>
         <div class="header-cutdown-content">
           <p v-if='stopTime > 0' v-for='(value, key) in cutdown' :key='key' class='header-cutdown-content-word'>{{value}} {{ paramsToWord[key] }}</p>
           <p v-if='stopTime <= 0' class='header-cutdown-content-word'>活动已结束</p>
@@ -22,9 +22,12 @@
       </div>
     </header>
     <section class="content">
-      <section class="content-rule">
-        <p class="content-rule-title">{{ rule.title }}</p>
-        <div class="content-rule-content" v-html="rule.content"></div>
+      <section class="content-alert">
+        <section class="content-alert-content">
+          <p class="content-alert-title">{{rule.title}}</p>
+          <p class="content-alert-list" v-for='(item, key) in rule.list' :key='key'>{{item}}</p>
+          <p class="content-alert-alert">{{rule.alert}}</p>
+        </section>
       </section>
       <section class="content-search">
         <section class='content-search-main'>
@@ -92,7 +95,15 @@ export default {
       page: 1,
       rule: {
         title: '征集规则',
-        content: '1、投稿作品须为原创，不得与国内其他宣传语雷同，如涉及著作权纠纷等法律问题，由投稿者本人负责。 <br/><br/>2、每位投稿者最多可提交3条作品，若有重复，则以最后投稿的作品为准。<br/><br/>3、接受团队形式参与者，最终将以团队集体作品参与评选，评选结果不受团队与个人区分影响。<br/><br/>4、作品需具有创意并且主题突出，对不符合要求的作品征集组委会有权进行筛除。<br/><br/>5、如在投稿作品中出现雷同，以最先投稿为准，征集组委会不单独通知相同投稿者。<br/><br/>6、咨询和监督电话：028-61810362。'
+        list: [
+          '针对医院的社会评价，要求客观真实',
+          '宣传语投稿作品须为原创，不得与国内其他宣传语雷同，如涉及著作权纠纷等法律问题，由投稿者本人负责。',
+          '每位投稿者最多可提交3条宣传语，若有重复，则以最后投稿的作品为准。',
+          '宣传语需具有创意并且主题突出，对不符合要求的作品征集组委会有权进行筛除。',
+          '如在投稿作品中出现雷同，以最先投稿为准，征集组委会不单独通知相同投稿者。',
+          '作品一旦获奖，获奖作品知识产权将归成都三六三医院所有。'
+        ],
+        alert: '成都三六三医院对此次活动拥有最终解释权！'
       },
       searchValue: '',
       paramsToWord: {
@@ -111,17 +122,17 @@ export default {
         {
           icon: 'fasongchenggong',
           text: '已报名',
-          num: '9999'
+          num: '0'
         },
         {
           icon: 'shuju',
           text: '累计投票',
-          num: '9999'
+          num: '0'
         },
         {
           icon: 'fenxiang',
           text: '访问量',
-          num: '123123123'
+          num: '0'
         }
       ],
       topImg: headerImg,
@@ -350,10 +361,55 @@ export default {
   .content {
     width: 100%;
 
+    &-alert {
+      margin: 0 auto;
+      margin-top: 60px;
+      display: flex;
+      padding: 30px;
+      align-items: center;
+      justify-content: center;
+      width: 720px;
+      background-image: -webkit-repeating-linear-gradient(135deg, transparent, transparent 4px, white 4px, white 12px);
+      white-space: normal;
+      display: block;
+      background-color: rgb(95, 156, 239);
+      box-sizing: border-box;
+
+      &-title {
+        margin-bottom: 40px;
+        font-size: 38px;
+        text-align: center;
+        font-weight: bold;
+        color: $THEME_COLOR;
+      }
+
+      &-list {
+        margin-bottom: 20px;
+        padding-left: 40px;
+        font-size: 32px;
+        line-height: 45px;
+        background: url('~@/assets/images/icon4.png') no-repeat left center;
+        background-size: 32px 32px;
+      }
+
+      &-alert {
+        padding-top: 40px;
+        padding-bottom: 15px;
+        font-size: 28px;
+        text-align: right;
+      }
+
+      &-content {
+        padding: 40px 20px 0;
+        width: 620px;
+        background: #fff;
+      }
+    }
+
     &-search {
       display: flex;
       align-items: center;
-      margin: -50px 20px 0;
+      margin: 20px 20px 0;
       height: 100px;
       background: $LIGHTER_THEME_COLOR;
 
@@ -493,12 +549,12 @@ export default {
           font-size: 30px;
           line-height: 35px;
           max-height: 110px;
-          color: $THEME_COLOR;
           overflow : hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
+          color: #000;
         }
 
         &-poll {
@@ -520,7 +576,7 @@ export default {
           text-overflow: ellipsis;
           white-space: nowrap;
           line-height: 30px;
-          color: $THEME_COLOR;
+          color: #333;
         }
 
         &-desc {
