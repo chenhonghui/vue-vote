@@ -388,7 +388,7 @@ export default {
         padding-left: 40px;
         font-size: 32px;
         line-height: 45px;
-        background: url('~@/assets/images/icon4.png') no-repeat left center;
+        background: url('~@/assets/images/icon4.png') no-repeat left 6.5px;
         background-size: 32px 32px;
       }
 

@@ -70,23 +70,23 @@ export default {
     }
 
     &-title {
-      margin-bottom: 30px;
+      margin-bottom: 100px;
       text-align: center;
-      font-size: 42px;
+      font-size: 50px;
       line-height: 50px;
       color: $THEME_COLOR;
     }
 
     &-desc {
-      font-size: 36px;
-      line-height: 40px;
+      font-size: 40px;
+      line-height: 48px;
       color: #666;
     }
   }
 
   &-footer {
     position: absolute;
-    bottom: 130px;
+    bottom: 200px;
 
     &-btn {
       width: 730px;

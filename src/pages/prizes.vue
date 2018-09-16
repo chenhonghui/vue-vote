@@ -15,15 +15,15 @@ export default {
       prizes: [
         {
           level: '一等奖（1名）',
-          content: '10000元。'
+          content: '10000元'
         },
         {
           level: '二等奖（2名）',
-          content: ' 5000元。'
+          content: ' 5000元'
         },
         {
           level: '三等奖（3名）',
-          content: '3000元。'
+          content: '3000元'
         },
         {
           level: '优秀奖（10名）',

@@ -38,7 +38,7 @@ export default {
           label: '宣传语',
           model: 'title',
           type: 'input',
-          placeholder: '请输入不超过18个中文的宣传语',
+          placeholder: '请输入不超过18个字的宣传语',
           verify: (text) => {
             const testCN = CN_REG_18
             if (!testCN.test(text)) {
@@ -49,10 +49,10 @@ export default {
           }
         },
         {
-          label: '宣传语描述',
+          label: '创意/内涵描述',
           model: 'content',
           type: 'input',
-          placeholder: '请输入不超过100个中文的创意/内涵描述',
+          placeholder: '请输入不超过100个字的创意/内涵描述',
           verify: (text) => {
             const testCN = CN_REG_30
             if (text.length <= 0) {
@@ -169,7 +169,7 @@ export default {
         border-bottom: 1PX solid $THEME_BORDER_COLOR;
 
         &-label {
-          width: 150px;
+          width: 200px;
           font-size: 28px;
           color: #333;
         }

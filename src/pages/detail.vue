@@ -77,10 +77,10 @@ export default {
       tips: '本次活动共设<span style="font-weight: bold;color: red">16个奖项，奖金丰厚</span><br/>想拿大奖并非难事',
       detailInfo: [
         {
-          content: '为了响应国家及省市相关部门的要求，改善医疗服务质量、构建和谐医患关系，树立医院良好形象，成都三六三医院拟面向大众<span style="font-weight: bold">公开收集医院社会评价</span>的同时，征集<span style="font-weight: bold">医院形象宣传语</span>。'
+          content: '为了响应国家及省市相关部门的要求，改善医疗服务质量、构建和谐医患关系，树立医院良好形象，成都三六三医院现面向大众<span style="font-weight: bold">公开收集医院社会评价</span>的同时，征集<span style="font-weight: bold">医院形象宣传语</span>。'
         },
         {
-          content: '成都三六三医院是集医疗、教学、科研功能于一体的<span style="font-weight: bold">国家公立三级甲等综合医院</span>，科室设置较齐全，专科特色突出，<span style="font-weight: bold">“全系外科微创治疗”和“肿瘤精准整合治疗”</span>为医院优势专业……关于医院的详细介绍您可以关注微信公众号“三六三医院”了解哦。'
+          content: '成都三六三医院是集医疗、教学、科研功能于一体的<span style="font-weight: bold">国家公立三级甲等综合医院</span>，科室设置齐全，专科特色突出，<span style="font-weight: bold">“全系外科微创治疗”和“肿瘤精准整合治疗”</span>为医院优势专业……关于医院的详细介绍您可以关注微信公众号“三六三医院”了解哦。'
         }
       ],
       ruleInfo: [
@@ -89,7 +89,7 @@ export default {
           list: [
             '针对医院的<span style="font-weight: bold">社会评价</span>，要求<span style="font-weight: bold">客观真实</span>，以便帮助医院发现并改进医疗服务中的不足，提高服务质量，提升患者就医体验，从而更好地<span style="font-weight: bold">履行医院的社会责任</span>',
             '宣传语<span style="font-weight: bold">突出医院性质为综合性医院（国家公立三级甲等综合医院）</span>，并<span style="font-weight: bold">重点凸显医院的特色技术</span>',
-            '<span style="font-weight: bold">简短精炼，朗朗上口，富有感染力和亲和力，易于记忆和传播</span>，字数<span style="font-weight: bold">不超过</span>18字。并对宣传语创意来源和内涵进行说明，说明字数不超过100字。'
+            '<span style="font-weight: bold">简短精炼，朗朗上口，富有感染力和亲和力，易于记忆和传播</span>，字数<span style="font-weight: bold">不超过</span>18字。并对宣传语创意来源和内涵进行说明，字数不超过100字'
           ]
         },
         {
@@ -101,7 +101,7 @@ export default {
             },
             {
               title: '网络投票',
-              content: '<span style="font-weight: bold">投稿作品</span>经征集组委会初审通过后将在“成都三六三医院形象宣传语及社会评价征集活动”页面<span style="font-weight: bold">进行展示、投票并接受社会监督</span>，显示信息为“编号+宣传语（包括创意及内涵说明）+投稿者”。'
+              content: '<span style="font-weight: bold">投稿作品</span>经征集组委会初审通过后将在“成都三六三医院形象宣传语及社会评价征集活动”页面<span style="font-weight: bold">进行展示、投票并接受社会监督</span>，显示信息为“编号+宣传语（包括创意及内涵说明）+投稿者”'
             }
           ]
         },
@@ -111,17 +111,17 @@ export default {
         },
         {
           title: '四、征集时间',
-          content: '<span style="font-weight: bold">2018年9月17日-9月28日</span><br/>最终的获奖者将通过媒体进行公示'
+          content: '<span style="font-weight: bold">2018年9月17日-10月16日</span><br/>最终的获奖者将通过媒体进行公示'
         },
         {
           title: '温馨提示',
           list: [
-            '针对医院的社会评价，要求客观真实',
+            '针对医院的社会评价，要求客观真实。',
             '宣传语投稿作品须为原创，不得与国内其他宣传语雷同，如涉及著作权纠纷等法律问题，由投稿者本人负责。',
             '每位投稿者最多可提交3条宣传语，若有重复，则以最后投稿的作品为准。',
             '宣传语需具有创意并且主题突出，对不符合要求的作品征集组委会有权进行筛除。',
             '如在投稿作品中出现雷同，以最先投稿为准，征集组委会不单独通知相同投稿者。',
-            '作品一旦获奖，获奖作品知识产权将归成都三六三医院所有。'
+            '作品一旦获奖，获奖作品知识产权归成都三六三医院所有。'
           ],
           alert: '成都三六三医院对此次活动拥有最终解释权！'
         }

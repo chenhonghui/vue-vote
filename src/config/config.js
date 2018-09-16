@@ -5,7 +5,7 @@ const origins = {
 }
 const appids = {
   rd: 'wx0de73ddd52c76f3d',
-  prod: 'wxa48883fdfd393764'
+  prod: 'wx0de73ddd52c76f3d'
 }
 
 export default {
