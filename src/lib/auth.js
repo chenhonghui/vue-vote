@@ -27,8 +27,11 @@ export default {
         window.location = url
       } else if (code && !openId) {
         api.wxOpenId(code).then(res => {
-          storage.set('openId', res.openid)
-          window.location = `${location.href.split('?')[0]}/`
+          if (!res.openid) {
+            alert('请先关注公众号再行使用')
+          }
+          res.openid && storage.set('openId', res.openid)
+          window.location = `${location.href.split('?')[0]}`
           resolve(res.openid)
         })
       } else {}
