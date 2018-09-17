@@ -59,6 +59,7 @@ export default {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling:touch;
   }
 }
 </style>
