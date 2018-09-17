@@ -19,6 +19,7 @@ Vue.config.productionTip = false
 Vue.use(Toast)
 
 auth.oauth()
+
 api.indexUpdate().then(() => {
   /* eslint-disable no-new */
   new Vue({

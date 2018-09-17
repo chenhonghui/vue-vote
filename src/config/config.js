@@ -1,6 +1,6 @@
 const currentEnv = process.env.NODE_ENV === 'development' ? 'rd' : 'prod'
 const origins = {
-  rd: 'http://daz7td.natappfree.cc/tpxt',
+  rd: 'http://jirjzx.natappfree.cc/tpxt',
   prod: 'http://xcyzj.ngchuanmei.com/tpxt'
 }
 const appids = {
@@ -14,6 +14,7 @@ export default {
   origins,
   api: origins[currentEnv],
   wxJsApiList: [
-    'onMenuShareTimeline'
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage'
   ]
 }

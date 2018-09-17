@@ -40,7 +40,7 @@ export default {
   login () {
     this.getSigntrue().then(res => {
       window.wx && window.wx.config({
-        appId: 'wx0de73ddd52c76f3d',
+        appId: config.appID,
         debug: config.currentEnv === 'rd',
         timestamp: res.timestamp,
         nonceStr: res.noncestr,
