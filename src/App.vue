@@ -60,7 +60,7 @@ export default {
   background: #fff;
 
   .-content {
-    width: 100%;
+    width: 750px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
