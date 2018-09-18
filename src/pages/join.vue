@@ -11,7 +11,6 @@
         </div>
       </section>
       <button class="form-submit" @click="submit">报名</button>
-      <p class="form-alert">报名后需要审核通过后才能参与投票</p>
     </section>
   </section>
 </template>

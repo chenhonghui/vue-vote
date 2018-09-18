@@ -1,7 +1,7 @@
 <template>
   <section class="page-vote" v-if='stopTime'>
     <header class="header">
-      <div class="header-img" :style="{backgroundImage: `url(${topImg})`}"></div>
+      <div class="header-img" :style="{backgroundImage: `url(${topImg})`}"  @dblclick="clear()"></div>
       <section class="header-join">
         <button class="header-join-btn" @click.stop='goJoin'>我要报名</button>
       </section>
@@ -57,6 +57,7 @@ import vueWaterfallEasy from 'vue-waterfall-easy'
 import headerImg from '../assets/images/header-bg.jpg'
 import { jump } from '../actions/common'
 import api from '../api/index'
+import storage from '../lib/localstorage'
 
 function cutDownTime (time, _this) {
   var timeDiff = time
@@ -153,6 +154,11 @@ export default {
     this.initPageData()
   },
   methods: {
+    clear () {
+      this.$toast('清除缓存成功')
+      storage.clear()
+      window.location.href = window.location.origin + window.location.pathname
+    },
     goDetail (id) {
       jump(`/pollDetail?contentId=${id}`, this.$router)
     },
