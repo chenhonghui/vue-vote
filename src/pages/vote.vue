@@ -24,7 +24,7 @@
     </header>
     <section class="content">
       <section class="content-bg">
-        <img src="@/assets/images/to.png" class='content-bg-img'>
+        <img src="@/assets/images/to.jpg" class='content-bg-img'>
       </section>
       <section class="content-alert">
         <section class="content-alert-content">

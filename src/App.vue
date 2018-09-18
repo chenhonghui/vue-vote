@@ -9,6 +9,8 @@
 
 <script>
 import homeFooter from './component/homeFooter.vue'
+import auth from './lib/auth'
+import {share} from './lib/share'
 
 export default {
   name: 'App',
@@ -39,9 +41,11 @@ export default {
     }
   },
   mounted () {
-    // auth.login().then(() => {
-    //   share('成都三六三医院形象宣传语及社会评价征集活动', '成都三六三医院现面向大众公开收集医院社会评价的同时，征集医院形象宣传语。', () => {}, () => {})
-    // })
+    auth.login().then(() => {
+      share('成都三六三医院形象宣传语及社会评价征集活动', '成都三六三医院现面向大众公开收集医院社会评价的同时，征集医院形象宣传语。', () => {}, () => {})
+    }, (e) => {
+      console.log(e)
+    })
   },
   components: {
     homeFooter

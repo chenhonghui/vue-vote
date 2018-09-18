@@ -51,7 +51,7 @@ export default {
   },
   // 投票相关
   enroll (form) {
-    return postWithoutSession(apis.enroll, form)
+    return postWithSession(apis.enroll, form)
   },
   vote (id) {
     return postWithSession(apis.vote, { contentId: id })
