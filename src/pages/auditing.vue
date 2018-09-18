@@ -9,7 +9,7 @@
     <div style="margin: 10px;overflow: hidden">
         <Button type="success" @click="download()">下载投票数据</Button>
         <div style="float: right;">
-            <Page :total="totalPage" :current="page" @on-change="getPageData" :page-size="pageSize"></Page>
+            <Page :total="totalPage" :current="page" @on-change="getPageData(page, filterType)" :page-size="pageSize"></Page>
         </div>
     </div>
   </section>
