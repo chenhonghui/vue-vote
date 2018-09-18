@@ -22,6 +22,10 @@
       </div>
     </header>
     <section class="content">
+      <button class="content-btn" @click="jumpTo()">我要了解医院</button>
+      <section class="content-bg">
+        <img src="@/assets/images/to.png" class='content-bg-img'>
+      </section>
       <section class="content-alert">
         <section class="content-alert-content">
           <p class="content-alert-title">{{rule.title}}</p>
@@ -231,6 +235,9 @@ export default {
         this.list = lastList.concat(res.content)
         this.totalPage = res.totalPage
       })
+    },
+    jumpTo () {
+      window.location.href = 'http://his.mobimedical.cn/index.php?g=Wap&m=CloudIndex&a=introduce&entry=1&wx=MbTXAN2k'
     }
   },
   components: {
@@ -367,6 +374,24 @@ export default {
 
   .content {
     width: 100%;
+
+    &-btn {
+      margin: 30px;
+      width: 690px;
+      height: 80px;
+      border-radius: 80px;
+      background: #fff;
+      color: $THEME_COLOR;
+      border: 1PX solid $THEME_COLOR;
+      font-size: 35px;
+      outline: none;
+    }
+
+    &-bg {
+      &-img {
+        width: 750px;
+      }
+    }
 
     &-alert {
       margin: 0 auto;

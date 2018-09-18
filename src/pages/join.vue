@@ -10,7 +10,7 @@
           <span class="form-item-textarea-span"></span>
         </div>
       </section>
-      <button class="form-submit" @click="submit">报名</button>
+      <button class="form-submit" @click="submit">我要投稿</button>
     </section>
   </section>
 </template>
