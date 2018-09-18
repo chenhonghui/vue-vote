@@ -3,7 +3,8 @@
     <header class="header">
       <div class="header-img" :style="{backgroundImage: `url(${topImg})`}"  @dblclick="clear()"></div>
       <section class="header-join">
-        <button class="header-join-btn" @click.stop='goJoin'>我要报名</button>
+        <button class="header-join-btn" @click.stop='goJoin'>我要投稿</button>
+        <button class="header-join-btn" @click="jumpTo()">我要了解医院</button>
       </section>
       <div class="header-num">
         <div class="header-num-content" v-for="(numItem, key) in numArray" :key="key">
@@ -22,7 +23,6 @@
       </div>
     </header>
     <section class="content">
-      <button class="content-btn" @click="jumpTo()">我要了解医院</button>
       <section class="content-bg">
         <img src="@/assets/images/to.png" class='content-bg-img'>
       </section>
@@ -360,7 +360,7 @@ export default {
       margin-top: -40px;
 
       &-btn {
-        width: 600px;
+        width: 300px;
         height: 80px;
         background: $THEME_COLOR;
         border-radius: 50px;
@@ -368,6 +368,11 @@ export default {
         border: none;
         color: #fff;
         font-size: 28px;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

@@ -27,12 +27,22 @@ function postWithSession (api, data) {
   })
 }
 
+function get (api) {
+  return axios({
+    method: 'GET',
+    api
+  })
+}
+
 export default {
   // 授权相关
   getWxSigntrue (url) {
     return postWithoutSession(apis.getWxsigntrue, {
       rUrl: url
     })
+  },
+  getWxUserInfo (token, openId) {
+    return get(`https://api.weixin.qq.com/sns/userinfo?access_token=${token}&${openId}&lang=zh_CN`)
   },
   wxOpenId (code) {
     return postWithoutSession(apis.wxopenid, {
