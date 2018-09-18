@@ -11,6 +11,7 @@
         </div>
       </section>
       <button class="form-submit" @click="submit">报名</button>
+      <p class="form-alert">报名后需要审核通过后才能参与投票</p>
     </section>
   </section>
 </template>
@@ -159,6 +160,13 @@ export default {
       margin: 0 30px;
       padding: 10px 15px;
       background: $LIGHTER_THEME_COLOR;
+
+      .form-alert {
+        margin-top: 20px;
+        font-size: 30px;
+        color: #999;
+        text-align: center;
+      }
 
       .form-item {
         display: flex;
