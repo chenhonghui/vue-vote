@@ -9,7 +9,7 @@
     <div style="margin: 10px;overflow: hidden">
         <Button type="success" @click="download()">下载投票数据</Button>
         <div style="float: right;">
-            <Page :total="totalPage" :current="page" @on-change="getPageData(page, filterType)" :page-size="pageSize"></Page>
+            <Page :total="totalPage" :current="page" @on-change="changePage" :page-size="pageSize"></Page>
         </div>
     </div>
   </section>
@@ -144,6 +144,10 @@ export default {
       const type = this.filterType
       this.page = 1
       this.getPageData(this.page, type)
+    },
+    changePage (page) {
+      const type = this.filterType
+      this.getPageData(page, type)
     },
     getPageData (page, type) {
       api.getUncheckedList(page, type).then(res => {
