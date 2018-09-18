@@ -8,24 +8,20 @@ import './assets/icon/iconfont.css'
 import 'reset-css'
 import 'vue2-toast/lib/toast.css'
 import Toast from 'vue2-toast'
-
-import auth from './lib/auth'
-import api from './api/index'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 
 import './constant/constant.scss'
 
 Vue.config.productionTip = false
 
 Vue.use(Toast)
+Vue.use(iView)
 
-auth.oauth()
-
-api.indexUpdate().then(() => {
-  /* eslint-disable no-new */
-  new Vue({
-    el: '#app',
-    router,
-    components: { App },
-    template: '<App/>'
-  })
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
 })

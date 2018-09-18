@@ -14,5 +14,11 @@ export default {
   getDetail: `${config.api}/index/detail`,
   indexUpdate: `${config.api}/index/updateViewCount`,
   // 投票总表
-  rank: `${config.api}/index/rank`
+  rank: `${config.api}/index/rank`,
+  // 下载相关
+  login: `${config.api}/admin/login`,
+  export: `${config.api}/report/export`,
+  // 审核相关
+  getUncheckedList: `${config.api}/unchecked`,
+  check: `${config.api}/check`
 }

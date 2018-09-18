@@ -27,11 +27,8 @@ export default {
         window.location = url
       } else if (code && !openId) {
         api.wxOpenId(code).then(res => {
-          if (!res.openid) {
-            alert('请先关注公众号再行使用')
-          }
-          res.openid && storage.set('openId', res.openid)
-          window.location = `${location.href.split('?')[0]}`
+          storage.set('openId', res.openid)
+          window.location = `${location.href.split('?')[0]}/`
           resolve(res.openid)
         })
       } else {}
@@ -40,7 +37,7 @@ export default {
   login () {
     this.getSigntrue().then(res => {
       window.wx && window.wx.config({
-        appId: config.appID,
+        appId: 'wx0de73ddd52c76f3d',
         debug: config.currentEnv === 'rd',
         timestamp: res.timestamp,
         nonceStr: res.noncestr,

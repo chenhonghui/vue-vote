@@ -5,7 +5,7 @@ const origins = {
 }
 const appids = {
   rd: 'wx0de73ddd52c76f3d',
-  prod: 'wxcbde9a8ee067fc88'
+  prod: 'wxa48883fdfd393764'
 }
 
 export default {
@@ -14,7 +14,6 @@ export default {
   origins,
   api: origins[currentEnv],
   wxJsApiList: [
-    'onMenuShareTimeline',
-    'onMenuShareAppMessage'
+    'onMenuShareTimeline'
   ]
 }

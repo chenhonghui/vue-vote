@@ -15,14 +15,31 @@ function postWithoutSession (api, data) {
 }
 
 function postWithSession (api, data) {
-  const openId = storage.get('openId') || ''
+  const openId = storage.get('token') || ''
 
   return new Promise((resolve, reject) => {
-    axios.post(api, qs.stringify(Object.assign({}, data, { wxId: openId }))).then(res => {
+    axios.post(api, qs.stringify(Object.assign({}, data, { token: openId }))).then(res => {
       if (res.data.code === '-1') {
         reject(res.data.msg)
       }
+      if (res.data.code === '-2') {
+        openId && storage.remove('token')
+        window.location.href = `${window.location.origin}/${window.location.pathname}`
+        reject(res.data.msg)
+      }
       resolve(res.data.data)
+    }, reject)
+  })
+}
+
+function getToblob (api) {
+  return new Promise((resolve, reject) => {
+    axios({
+      method: 'GET',
+      url: api,
+      responseType: 'blob'
+    }).then(res => {
+      resolve(res)
     }, reject)
   })
 }
@@ -67,5 +84,25 @@ export default {
   // 投票总榜
   rank () {
     return postWithoutSession(apis.rank, {})
+  },
+  // 下载相关
+  exportLogin (data) {
+    return postWithoutSession(apis.login, data)
+  },
+  export () {
+    return getToblob(apis.export, {})
+  },
+  // 审核相关
+  getUncheckedList (index, checked) {
+    return postWithSession(apis.getUncheckedList, {
+      index,
+      checked
+    })
+  },
+  check (contentId, checked) {
+    return postWithSession(apis.check, {
+      contentId,
+      checked
+    })
   }
 }

@@ -31,7 +31,6 @@ export default {
 
 .-footer {
   position: fixed;
-  z-index: 99;
   bottom: 0;
   left: 0;
   display: flex;
