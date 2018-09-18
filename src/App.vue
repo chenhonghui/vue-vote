@@ -26,7 +26,7 @@ export default {
           icon: 'tijiaowendang'
         },
         {
-          name: '报名',
+          name: '投稿',
           path: '/join',
           icon: 'jinbi'
         },
