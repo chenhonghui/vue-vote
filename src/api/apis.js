@@ -20,5 +20,6 @@ export default {
   export: `${config.api}/report/export`,
   // 审核相关
   getUncheckedList: `${config.api}/unchecked`,
-  check: `${config.api}/check`
+  check: `${config.api}/check`,
+  del: `${config.api}/del`
 }

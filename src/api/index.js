@@ -104,5 +104,10 @@ export default {
       contentId,
       checked
     })
+  },
+  del (contentId) {
+    return postWithSession(apis.del, {
+      contentId
+    })
   }
 }

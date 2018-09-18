@@ -90,7 +90,7 @@ export default {
           }
         },
         {
-          title: '操作',
+          title: '审核',
           key: 'action',
           width: 150,
           align: 'center',
@@ -126,6 +126,30 @@ export default {
                   }
                 }
               }, '拒绝')
+            ])
+          }
+        },
+        {
+          title: '操作',
+          key: 'action',
+          width: 150,
+          align: 'center',
+          render: (h, params) => {
+            return h('div', [
+              h('Button', {
+                props: {
+                  type: 'error',
+                  size: 'small'
+                },
+                style: {
+                  marginRight: '5px'
+                },
+                on: {
+                  click: () => {
+                    this.del(params.row.id)
+                  }
+                }
+              }, '删除')
             ])
           }
         }
@@ -171,6 +195,14 @@ export default {
     },
     check (contentId, checked) {
       api.check(contentId, checked).then(res => {
+        this.getPageData(this.page)
+        this.$toast('操作成功')
+      }, (msg) => {
+        msg && this.$toast(msg)
+      })
+    },
+    del (contentId) {
+      api.del(contentId).then(() => {
         this.getPageData(this.page)
         this.$toast('操作成功')
       }, (msg) => {
