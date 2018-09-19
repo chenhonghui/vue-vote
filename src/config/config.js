@@ -1,6 +1,6 @@
 const currentEnv = process.env.NODE_ENV === 'development' ? 'rd' : 'prod'
 const origins = {
-  rd: 'http://zs6xy8.natappfree.cc/tpxt',
+  rd: 'http://68i64h.natappfree.cc/tpxt',
   prod: 'http://xcyzj.ngchuanmei.com/tpxt'
 }
 const appids = {

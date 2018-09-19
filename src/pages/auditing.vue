@@ -171,11 +171,12 @@ export default {
     },
     changePage (page) {
       const type = this.filterType
+      this.page = page
       this.getPageData(page, type)
     },
     getPageData (page, type) {
       api.getUncheckedList(page, type).then(res => {
-        this.list = res.content
+        this.list = [].concat(res.content)
         this.totalPage = Number(res.totalCount)
       })
     },
