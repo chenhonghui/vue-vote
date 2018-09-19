@@ -209,7 +209,10 @@ export default {
       api.vote(id).then(() => {
         this.$toast('投票成功')
         this.initOtherInfo()
-        this.initPageData()
+        this.getPageData(this.page).then((res) => {
+          this.list = [].concat(res.content)
+          this.totalPage = res.totalPage
+        })
       }).catch((msg) => {
         msg && this.$toast(msg)
       })
