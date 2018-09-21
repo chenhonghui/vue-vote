@@ -9,23 +9,16 @@ import 'reset-css'
 import 'vue2-toast/lib/toast.css'
 import Toast from 'vue2-toast'
 
-import auth from './lib/auth'
-import api from './api/index'
-
 import './constant/constant.scss'
 
 Vue.config.productionTip = false
 
 Vue.use(Toast)
 
-auth.oauth()
-
-api.indexUpdate().then(() => {
-  /* eslint-disable no-new */
-  new Vue({
-    el: '#app',
-    router,
-    components: { App },
-    template: '<App/>'
-  })
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
 })
