@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="header-cutdown">
-        <p class="header-cutdown-title">征集已结束，投票进行中</p>
+        <p class="header-cutdown-title">活动已结束</p>
         <div class="header-cutdown-content">
           <p v-if='stopTime > 0' v-for='(value, key) in cutdown' :key='key' class='header-cutdown-content-word'>{{value}} {{ paramsToWord[key] }}</p>
           <!-- <p v-if='stopTime <= 0' class='header-cutdown-content-word'>活动已结束</p> -->
